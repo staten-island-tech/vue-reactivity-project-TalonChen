@@ -4,6 +4,8 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const keys = {}
+</script>
 
 <style scoped></style>
