@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>haiioi</h1>
+    <h2>{{ animal.Part }}</h2>
+    <h2>{{ animal.origin }}</h2>
   </div>
 </template>
 
@@ -13,4 +14,14 @@ defineProps({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  width: 150px;
+  border: 3px solid cyan;
+}
+</style>

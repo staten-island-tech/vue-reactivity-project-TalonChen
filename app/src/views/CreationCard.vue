@@ -1,13 +1,14 @@
 <template>
   <div>
-    <AnimalList v-for="animal in animals" :key="animal.origin" :animal="animal" />
+    <AnimalList v-for="animal in AnimalParts" :key="animal.Part" :animal="animal" />
   </div>
 </template>
 
 <script setup>
-import AnimalList from '@/views/AnimalList.vue'
 import { ref } from 'vue'
+import AnimalList from '@/views/AnimalList.vue'
 const AnimalParts = ref([
+  animalPart = ''
   { origin: 'Lion', Part: 'Tail' },
   { origin: 'Lion', Part: 'Head' },
   { origin: 'Lion', Part: 'RightLegs' },
@@ -31,4 +32,37 @@ const AnimalParts = ref([
 ])
 </script>
 
-<style scoped></style>
+<style scoped>
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container {
+  display: flex;
+  width: 80vw;
+  margin: 20px auto;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+</style>
