@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <h2>{{ animal.Part }}</h2>
-    <h2>{{ animal.origin }}</h2>
+  <div class="Allparts">
+    <h2>{{ animal.part }}</h2>
   </div>
 </template>
 
@@ -15,13 +14,15 @@ defineProps({
 </script>
 
 <style scoped>
-div {
+.Allparts {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
   justify-content: space-around;
   align-items: center;
   height: 200px;
-  width: 150px;
+  width: 75%;
   border: 3px solid cyan;
 }
 </style>

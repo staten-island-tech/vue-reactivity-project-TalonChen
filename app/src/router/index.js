@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AnimalList from '@/views/AnimalList.vue'
-import CreationCard from '@/views/CreationCard.vue'
+import HomeCreate from '@/views/HomeCreate.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: '/cards',
       name: 'home',
-      component: CreationCard,
+      component: HomeCreate,
     },
   ],
 })
