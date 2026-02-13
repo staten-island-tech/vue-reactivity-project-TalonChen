@@ -13,19 +13,16 @@ const AnimalParts = ref([
   { part: 'Lion - RightLegs' },
   { part: 'Lion - LeftLegs' },
   { part: 'Lion - MainBody' },
-
   { part: 'Tiger - Tail' },
   { part: 'Tiger - Head' },
   { part: 'Tiger - RightLegs' },
   { part: 'Tiger - LeftLegs' },
   { part: 'Tiger - MainBody' },
-
   { part: 'Cat - Tail' },
   { part: 'Cat - Head' },
   { part: 'Cat - RightLegs' },
   { part: 'Cat - LeftLegs' },
   { part: 'Cat - MainBody' },
-
   { part: 'Dog - Tail' },
   { part: 'Dog - Head' },
   { part: 'Dog - RightLegs' },
@@ -36,21 +33,18 @@ const AnimalParts = ref([
 
 <style scoped>
 .AnimalContainerList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   position: absolute;
   right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-
+  top: 10%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-
   width: 40%;
-  max-height: 80vh;
-  overflow-y: auto;
   padding: 1.5rem;
-
-  background: #f9fafc;
+  background: beige;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }

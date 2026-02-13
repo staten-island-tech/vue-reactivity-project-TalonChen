@@ -1,6 +1,7 @@
 <template>
   <div class="Allparts">
     <h2>{{ animal.part }}</h2>
+    <button>Implant</button>
   </div>
 </template>
 
