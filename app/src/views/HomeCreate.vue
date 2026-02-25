@@ -8,22 +8,22 @@
 import { ref } from 'vue'
 import AnimalList from '@/views/AnimalList.vue'
 const AnimalParts = ref([
-  { part: 'Lion - Tail', image: '/app/' },
-  { part: 'Lion - Head' },
-  { part: 'Lion - Legs' },
-  { part: 'Lion - MainBody' },
-  { part: 'Tiger - Tail' },
-  { part: 'Tiger - Head' },
-  { part: 'Tiger - Legs' },
-  { part: 'Tiger - MainBody' },
-  { part: 'Cat - Tail' },
-  { part: 'Cat - Head' },
-  { part: 'Cat - Legs' },
-  { part: 'Cat - MainBody' },
-  { part: 'Dog - Tail' },
-  { part: 'Dog - Head' },
-  { part: 'Dog - Legs' },
-  { part: 'Dog - MainBody' },
+  { part: 'Lion - Tail', image: '/liontail.png' },
+  { part: 'Lion - Head', image: '/lionhead.png' },
+  { part: 'Lion - Legs', image: '/lionlegs.png' },
+  { part: 'Lion - MainBody', image: '/lionbody.png' },
+  { part: 'Tiger - Tail', image: '/tigertail.png' },
+  { part: 'Tiger - Head', image: '/tigerhead.png' },
+  { part: 'Tiger - Legs', image: '/tigerlegs.png' },
+  { part: 'Tiger - MainBody', image: '/tigerbody.png' },
+  { part: 'Cat - Tail', image: '/cattail.png' },
+  { part: 'Cat - Head', image: '/cathead.png' },
+  { part: 'Cat - Legs', image: '/catlegs.png' },
+  { part: 'Cat - MainBody', image: '/catbody.png' },
+  { part: 'Dog - Tail', image: '/dogtail.png' },
+  { part: 'Dog - Head', image: '/doghead.png' },
+  { part: 'Dog - Legs', image: '/doglegs.png' },
+  { part: 'Dog - MainBody', image: '/dogbody.png' },
 ])
 </script>
 
