@@ -8,25 +8,21 @@
 import { ref } from 'vue'
 import AnimalList from '@/views/AnimalList.vue'
 const AnimalParts = ref([
-  { part: 'Lion - Tail' },
+  { part: 'Lion - Tail', image: '/app/' },
   { part: 'Lion - Head' },
-  { part: 'Lion - RightLegs' },
-  { part: 'Lion - LeftLegs' },
+  { part: 'Lion - Legs' },
   { part: 'Lion - MainBody' },
   { part: 'Tiger - Tail' },
   { part: 'Tiger - Head' },
-  { part: 'Tiger - RightLegs' },
-  { part: 'Tiger - LeftLegs' },
+  { part: 'Tiger - Legs' },
   { part: 'Tiger - MainBody' },
   { part: 'Cat - Tail' },
   { part: 'Cat - Head' },
-  { part: 'Cat - RightLegs' },
-  { part: 'Cat - LeftLegs' },
+  { part: 'Cat - Legs' },
   { part: 'Cat - MainBody' },
   { part: 'Dog - Tail' },
   { part: 'Dog - Head' },
-  { part: 'Dog - RightLegs' },
-  { part: 'Dog - LeftLegs' },
+  { part: 'Dog - Legs' },
   { part: 'Dog - MainBody' },
 ])
 </script>
