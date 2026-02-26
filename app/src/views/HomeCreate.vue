@@ -8,22 +8,22 @@
 import { ref } from 'vue'
 import AnimalList from '@/views/AnimalList.vue'
 const AnimalParts = ref([
-  { part: 'Lion - Tail', image: '/liontail.png' },
   { part: 'Lion - Head', image: '/lionhead.png' },
-  { part: 'Lion - Legs', image: '/lionlegs.png' },
   { part: 'Lion - MainBody', image: '/lionbody.png' },
-  { part: 'Tiger - Tail', image: '/tigertail.png' },
+  { part: 'Lion - Legs', image: '/lionlegs.png' },
+  { part: 'Lion - Tail', image: '/liontail.png' },
   { part: 'Tiger - Head', image: '/tigerhead.png' },
-  { part: 'Tiger - Legs', image: '/tigerlegs.png' },
   { part: 'Tiger - MainBody', image: '/tigerbody.png' },
-  { part: 'Cat - Tail', image: '/cattail.png' },
+  { part: 'Tiger - Legs', image: '/tigerlegs.png' },
+  { part: 'Tiger - Tail', image: '/realtigertail.png' },
   { part: 'Cat - Head', image: '/cathead.png' },
-  { part: 'Cat - Legs', image: '/catlegs.png' },
   { part: 'Cat - MainBody', image: '/catbody.png' },
-  { part: 'Dog - Tail', image: '/dogtail.png' },
+  { part: 'Cat - Legs', image: '/catlegs.png' },
+  { part: 'Cat - Tail', image: '/cattail.png' },
   { part: 'Dog - Head', image: '/doghead.png' },
-  { part: 'Dog - Legs', image: '/doglegs.png' },
   { part: 'Dog - MainBody', image: '/dogbody.png' },
+  { part: 'Dog - Legs', image: '/doglegs.png' },
+  { part: 'Dog - Tail', image: '/dogtail.png' },
 ])
 </script>
 
@@ -36,7 +36,7 @@ const AnimalParts = ref([
   right: 5%;
   top: 10%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   width: 40%;
   padding: 1.5rem;
