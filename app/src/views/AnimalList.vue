@@ -2,7 +2,7 @@
   <div class="Allparts">
     <img :src="animal.image" :alt="animal.part" />
     <h2>{{ animal.part }}</h2>
-    <button>Implant</button>
+    <slot> </slot>
   </div>
 </template>
 

@@ -1,12 +1,18 @@
 <template>
   <div class="AnimalContainerList">
-    <AnimalList v-for="animal in AnimalParts" :key="animal.part" :animal="animal" />
+    <AnimalList @click="implant" v-for="animal in AnimalParts" :key="animal.part" :animal="animal">
+      <button>Implant</button>
+    </AnimalList>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import AnimalList from '@/views/AnimalList.vue'
+
+function implant(part) {
+  console.log(part)
+}
 const AnimalParts = ref([
   { part: 'Lion - Head', image: '/lionhead.png' },
   { part: 'Lion - MainBody', image: '/lionbody.png' },
