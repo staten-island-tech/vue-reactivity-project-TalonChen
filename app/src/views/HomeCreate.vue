@@ -15,6 +15,15 @@ import { ref } from 'vue'
 import AnimalList from '@/views/AnimalList.vue'
 
 function implant(animalPart) {
+  if (animalPart.type === 'head') {
+    console.log('Implanting head:', animalPart.part)
+  } else if (animalPart.type === 'body') {
+    console.log('Implanting body:', animalPart.part)
+  } else if (animalPart.type === 'legs') {
+    console.log('Implanting legs:', animalPart.part)
+  } else if (animalPart.type === 'tail') {
+    console.log('Implanting tail:', animalPart.part)
+  }
   console.log(animalPart.part)
 }
 const AnimalParts = ref([
