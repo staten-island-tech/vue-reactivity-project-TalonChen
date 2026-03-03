@@ -2,7 +2,7 @@
   <div class="Allparts">
     <img :src="animal.image" :alt="animal.part" />
     <h2>{{ animal.part }}</h2>
-    <slot> </slot>
+    <slot></slot>
   </div>
 </template>
 

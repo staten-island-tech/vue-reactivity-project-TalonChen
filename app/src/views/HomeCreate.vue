@@ -1,6 +1,6 @@
 <template>
   <div class="MainLayout">
-    <div class="BigBox"></div>
+    <div class="BigBox">{{ implantedParts }}</div>
 
     <div class="AnimalContainerList">
       <AnimalList v-for="animal in AnimalParts" :key="animal.part" :animal="animal">
@@ -11,37 +11,30 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import AnimalList from '@/views/AnimalList.vue'
 
+let implantedParts = reactive({ head: null, body: null, legs: null, tail: null })
+
 function implant(animalPart) {
-  if (animalPart.type === 'head') {
-    console.log('Implanting head:', animalPart.part)
-  } else if (animalPart.type === 'body') {
-    console.log('Implanting body:', animalPart.part)
-  } else if (animalPart.type === 'legs') {
-    console.log('Implanting legs:', animalPart.part)
-  } else if (animalPart.type === 'tail') {
-    console.log('Implanting tail:', animalPart.part)
-  }
-  console.log(animalPart.part)
+  implantedParts[animalPart.type] = animalPart.image
 }
+
+function showImage() {}
+
 const AnimalParts = ref([
   { part: 'Lion Head', type: 'head', image: '/lionhead.png' },
   { part: 'Lion MainBody', type: 'body', image: '/lionbody.png' },
   { part: 'Lion Legs', type: 'legs', image: '/lionlegs.png' },
   { part: 'Lion Tail', type: 'tail', image: '/liontail.png' },
-
   { part: 'Tiger Head', type: 'head', image: '/tigerhead.png' },
   { part: 'Tiger MainBody', type: 'body', image: '/tigerbody.png' },
   { part: 'Tiger Legs', type: 'legs', image: '/tigerlegs.png' },
   { part: 'Tiger Tail', type: 'tail', image: '/realtigertail.png' },
-
   { part: 'Cat Head', type: 'head', image: '/cathead.png' },
   { part: 'Cat MainBody', type: 'body', image: '/catbody.png' },
   { part: 'Cat Legs', type: 'legs', image: '/catlegs.png' },
   { part: 'Cat Tail', type: 'tail', image: '/cattail.png' },
-
   { part: 'Dog Head', type: 'head', image: '/doghead.png' },
   { part: 'Dog MainBody', type: 'body', image: '/dogbody.png' },
   { part: 'Dog Legs', type: 'legs', image: '/doglegs.png' },
