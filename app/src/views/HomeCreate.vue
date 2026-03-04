@@ -1,6 +1,11 @@
 <template>
   <div class="MainLayout">
-    <div class="BigBox">{{ implantedParts }}</div>
+    <div class="BigBox">
+      <div class="head"><img :src="implantedParts.head" class="part" /></div>
+      <div class="body"><img :src="implantedParts.body" class="part" /></div>
+      <div class="legs"><img :src="implantedParts.legs" class="part" /></div>
+      <div class="tail"><img :src="implantedParts.tail" class="part" /></div>
+    </div>
 
     <div class="AnimalContainerList">
       <AnimalList v-for="animal in AnimalParts" :key="animal.part" :animal="animal">
@@ -19,8 +24,6 @@ let implantedParts = reactive({ head: null, body: null, legs: null, tail: null }
 function implant(animalPart) {
   implantedParts[animalPart.type] = animalPart.image
 }
-
-function showImage() {}
 
 const AnimalParts = ref([
   { part: 'Lion Head', type: 'head', image: '/lionhead.png' },
@@ -49,14 +52,54 @@ const AnimalParts = ref([
   align-items: flex-start;
   padding: 2rem;
 }
-
 .BigBox {
+  position: relative;
   width: 400px;
-  min-height: 600px;
+  height: 600px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  overflow: hidden;
+}
+
+.part {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.head,
+.body,
+.legs,
+.tail {
+  position: absolute;
+}
+
+.body {
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.head {
+  top: 60px;
+  left: 25%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.tail {
+  top: 190px;
+  right: -90px;
+  z-index: 0;
+}
+
+.legs {
+  bottom: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
 }
 
 .AnimalContainerList {
