@@ -1,6 +1,7 @@
 <template>
   <div class="MainLayout">
     <div class="BigBox">
+      <h1>Creation</h1>
       <div class="head"><img :src="implantedParts.head" class="part" /></div>
       <div class="body"><img :src="implantedParts.body" class="part" /></div>
       <div class="legs"><img :src="implantedParts.legs" class="part" /></div>
@@ -19,7 +20,12 @@
 import { reactive, ref } from 'vue'
 import AnimalList from '@/views/AnimalList.vue'
 
-let implantedParts = reactive({ head: null, body: null, legs: null, tail: null })
+let implantedParts = reactive({
+  head: '/white.png',
+  body: '/white.png',
+  legs: '/white.png',
+  tail: '/white.png',
+})
 
 function implant(animalPart) {
   implantedParts[animalPart.type] = animalPart.image
@@ -83,20 +89,20 @@ const AnimalParts = ref([
 }
 
 .head {
-  top: 60px;
+  top: 110px;
   left: 25%;
   transform: translateX(-50%);
   z-index: 2;
 }
 
 .tail {
-  top: 190px;
-  right: -90px;
+  top: 180px;
+  right: -40px;
   z-index: 0;
 }
 
 .legs {
-  bottom: 42px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
